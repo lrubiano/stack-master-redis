@@ -12,6 +12,7 @@ services:
       mode: global
       restart_policy:
         condition: any
+    restart: always
     volumes: 
       - 'redis:/opt/bitnami/redis/etc/'
 
@@ -35,6 +36,7 @@ services:
         delay: 20s
       restart_policy:
         condition: any
+    restart: always
 
   redis-sentinel:
     image: 'bitnami/redis:5.0.2'
@@ -62,6 +64,8 @@ services:
       mode: global
       restart_policy:
         condition: any
+    restart: always
+    
         
 volumes:
   redis:
